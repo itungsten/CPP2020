@@ -9,12 +9,13 @@ using namespace  std;
 
 ACL_Image Master::self;
 ACL_Image Master::light;
+extern int hp;
 
 void Master::draw() {
     putImageTransparent(&self,posX,posY,width,height,RGB(255,255,255));
     if(sleepTime)putImageTransparent(&light,posX,posY,width,height,RGB(255,255,255));
     char buf[BUF_LEN];
-    sprintf(buf,"Your Score: %d",score);
+    sprintf(buf,"Your Score: %d \t Your HP: %d",score,hp);
     paintText(10,10,buf);
 }
 

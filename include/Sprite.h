@@ -9,10 +9,10 @@
 
 class Sprite:public Object{
 protected:
-    int hp;
     double tarX,tarY;
 
 public:
+    int hp;
     Sprite(int Score,int Width,int Height,int Velocity,int Hp);
     virtual ~Sprite(){
 

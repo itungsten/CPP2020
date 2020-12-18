@@ -100,6 +100,9 @@
 		<Unit filename="C:/Users/tungsten/Desktop/sprite/ThunderSprite.cpp">
 			<Option target="sprite"/>
 		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/WaterSprite.cpp">
+			<Option target="sprite"/>
+		</Unit>
 		<Unit filename="C:/Users/tungsten/Desktop/sprite/WindSprite.cpp">
 			<Option target="sprite"/>
 		</Unit>
@@ -125,6 +128,9 @@
 			<Option target="sprite"/>
 		</Unit>
 		<Unit filename="C:/Users/tungsten/Desktop/sprite/include/ThunderSprite.h">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/include/WaterSprite.h">
 			<Option target="sprite"/>
 		</Unit>
 		<Unit filename="C:/Users/tungsten/Desktop/sprite/include/WindSprite.h">

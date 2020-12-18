@@ -5,13 +5,14 @@
 #include "WindSprite.h"
 #include "ThunderSprite.h"
 #include "FireSprite.h"
+#include "WaterSprite.h"
 
 #include<ctime>
 
 void startTimer(int timerID, int timeinterval);
 void cancelTimer(int timerID);
 Object* arr[MAXN+1];
-int cnt;
+int cnt;int hp=MASTER_HP;bool isRun=0;bool isOver;
 
 ACL_Sound backSound;
 ACL_Sound getPoint;
@@ -24,6 +25,10 @@ void initObjs();
 void rePaint();
 void printWelcome();
 void genSprite();
+void deleteEle(int pos);
+void checkOut();
+bool isWater(Object* ptr);
+void gameOver();
 
 int Setup()
 {
@@ -52,11 +57,18 @@ int Setup()
 void timerCallBack(int timerID){
     switch(timerID){
         case SECOND_TIMER:
-            for(int i=0;i<cnt;++i){
-                if(arr[i])arr[i]->timeChange();
+            arr[0]->timeChange();
+            for(int i=1;i<cnt;++i){
+                if(!arr[i])continue;
+                arr[i]->timeChange();
+                if(isWater(arr[i])){
+                    WaterSprite* tmp=(WaterSprite* )arr[i];
+                    if(!tmp->timeToLive())deleteEle(i);
+                }
             }
             break;
         case FRESH_TIMER:
+            checkOut();
             rePaint();
             break;
         case BIRTH_TIMER:
@@ -82,6 +94,8 @@ void keyboardCallBack(int key,int event){
             case VK_RIGHT:
                 right=1;
                 break;
+            case VK_ESCAPE:
+                exit(0);
         }
     }
     if(event==KEY_UP){
@@ -99,9 +113,19 @@ void keyboardCallBack(int key,int event){
                 right=0;
                 break;
             case VK_RETURN:
-                startTimer(SECOND_TIMER,1000);
-                startTimer(FRESH_TIMER,FRESH_INTERVAL);
-                startTimer(BIRTH_TIMER,BIRTH_INTERVAL);
+                if(isOver)break;
+                if(!isRun){
+                    startTimer(SECOND_TIMER,1000);
+                    startTimer(FRESH_TIMER,FRESH_INTERVAL);
+                    startTimer(BIRTH_TIMER,BIRTH_INTERVAL);
+                    isRun=1;
+                }
+                else{
+                    isRun=0;
+                    cancelTimer(BIRTH_TIMER);
+                    cancelTimer(FRESH_TIMER);
+                    cancelTimer(SECOND_TIMER);
+                }
                 break;
         }
     }
@@ -115,6 +139,7 @@ void initPic(){
     WindSprite::initSelfPic();
     ThunderSprite::initSelfPic();
     FireSprite::initSelfPic();
+    WaterSprite::initSelfPic();
 }
 void printWelcome(){
     ACL_Image page;
@@ -122,27 +147,24 @@ void printWelcome(){
     putImageScale(&page,0,0,getWidth(),getHeight());
 }
 void initObjs(){
-    arr[cnt++]=new Master(PIC_SIZE + 10, PIC_SIZE + 10, MASTER_V);
+    arr[cnt++]=new Master(PIC_SIZE, PIC_SIZE, MASTER_V);
     arr[cnt++]=(Object*)new CrazySprite();
     arr[cnt++]=(Object*)new WindSprite();
     arr[cnt++]=(Object*)new ThunderSprite();
     arr[cnt++]=(Object*)new FireSprite();
+    arr[cnt++]=(Object*)new WaterSprite();
 }
 void rePaint(){
     beginPaint();
-//            clearDevice();
-    putImageScale(&background,0,0,getWidth(),getHeight());
-    for(int i=1;i<MAXN+1;++i){
-        if(!arr[i])continue;
-        if(arr[0]->isConflict(arr[i])){
-            if(((Master* )arr[0])->getSleep())break;
-            playSound(getPoint,0);
-            arr[0]->incScore(arr[i]->getScore());
-            free(arr[i]);
-            arr[i]=nullptr;
-            --cnt;
-        }
+//  clearDevice();
+    if(isOver){
+        ACL_Image page;
+        loadImage(OVER_PIC,&page);
+        putImageScale(&page,0,0,getWidth(),getHeight());
+        endPaint();
+        return;
     }
+    putImageScale(&background,0,0,getWidth(),getHeight());
     for(int i=1;i<MAXN+1;++i){
         if(!arr[i])continue;
         ((Sprite*) arr[i])->walk();
@@ -155,7 +177,20 @@ void genSprite(){
     if(cnt==MAXN+1)return;
     for(int i=1;;++i){
         if(!arr[i]){
-            int deci=rand()%KIND;
+            int deci=rand()%2333;
+            if(deci<1000){
+                deci=CRAZY;
+            }
+            else if(deci<1400){
+                deci=WIND;
+            }
+            else if(deci<1800){
+                deci=WATER;
+            }
+            else if(deci<2133){
+                deci=FIRE;
+            }
+            else deci=THUNDER;
             switch(deci){
                 case CRAZY:
                     arr[i]=new CrazySprite();
@@ -168,9 +203,38 @@ void genSprite(){
                     break;
                 case FIRE:
                     arr[i]=new FireSprite();
+                case WATER:
+                    arr[i]=new WaterSprite();
             }
             ++cnt;
             return;
         }
     }
+}
+void deleteEle(int pos){
+    delete arr[pos];
+    arr[pos]=nullptr;
+    --cnt;
+}
+void checkOut(){
+    if(isOver)return;
+    for(int i=1;i<MAXN+1;++i){
+        if(!arr[i])continue;
+        if(arr[0]->isConflict(arr[i])){
+            playSound(getPoint,0);
+            if(!isWater(arr[i])&&!(((Master* )arr[0])->getSleep()))arr[0]->incScore(arr[i]->getScore());
+            else{
+                arr[0]->decScore(arr[i]->getScore());
+                --hp;
+                if(hp<=0)gameOver();
+            }
+            deleteEle(i);
+        }
+    }
+}
+bool isWater(Object* ptr){
+    return ((Sprite*)ptr)->hp<0;
+}
+void gameOver(){
+    isOver=1;
 }

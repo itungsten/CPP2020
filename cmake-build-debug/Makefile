@@ -284,6 +284,33 @@ ThunderSprite.cpp.s:
 	$(MAKE) -f CMakeFiles\sprite.dir\build.make CMakeFiles/sprite.dir/ThunderSprite.cpp.s
 .PHONY : ThunderSprite.cpp.s
 
+WaterSprite.obj: WaterSprite.cpp.obj
+
+.PHONY : WaterSprite.obj
+
+# target to build an object file
+WaterSprite.cpp.obj:
+	$(MAKE) -f CMakeFiles\sprite.dir\build.make CMakeFiles/sprite.dir/WaterSprite.cpp.obj
+.PHONY : WaterSprite.cpp.obj
+
+WaterSprite.i: WaterSprite.cpp.i
+
+.PHONY : WaterSprite.i
+
+# target to preprocess a source file
+WaterSprite.cpp.i:
+	$(MAKE) -f CMakeFiles\sprite.dir\build.make CMakeFiles/sprite.dir/WaterSprite.cpp.i
+.PHONY : WaterSprite.cpp.i
+
+WaterSprite.s: WaterSprite.cpp.s
+
+.PHONY : WaterSprite.s
+
+# target to generate assembly for a file
+WaterSprite.cpp.s:
+	$(MAKE) -f CMakeFiles\sprite.dir\build.make CMakeFiles/sprite.dir/WaterSprite.cpp.s
+.PHONY : WaterSprite.cpp.s
+
 WindSprite.obj: WindSprite.cpp.obj
 
 .PHONY : WindSprite.obj
@@ -392,6 +419,9 @@ help:
 	@echo ... ThunderSprite.obj
 	@echo ... ThunderSprite.i
 	@echo ... ThunderSprite.s
+	@echo ... WaterSprite.obj
+	@echo ... WaterSprite.i
+	@echo ... WaterSprite.s
 	@echo ... WindSprite.obj
 	@echo ... WindSprite.i
 	@echo ... WindSprite.s

@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/sprite.dir/Object.cpp.obj"
   "CMakeFiles/sprite.dir/Sprite.cpp.obj"
   "CMakeFiles/sprite.dir/ThunderSprite.cpp.obj"
+  "CMakeFiles/sprite.dir/WaterSprite.cpp.obj"
   "CMakeFiles/sprite.dir/WindSprite.cpp.obj"
   "CMakeFiles/sprite.dir/acllib.c.obj"
   "CMakeFiles/sprite.dir/main.cpp.obj"

@@ -20,6 +20,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/tungsten/Desktop/sprite/Object.cpp" "C:/Users/tungsten/Desktop/sprite/cmake-build-debug/CMakeFiles/sprite.dir/Object.cpp.obj"
   "C:/Users/tungsten/Desktop/sprite/Sprite.cpp" "C:/Users/tungsten/Desktop/sprite/cmake-build-debug/CMakeFiles/sprite.dir/Sprite.cpp.obj"
   "C:/Users/tungsten/Desktop/sprite/ThunderSprite.cpp" "C:/Users/tungsten/Desktop/sprite/cmake-build-debug/CMakeFiles/sprite.dir/ThunderSprite.cpp.obj"
+  "C:/Users/tungsten/Desktop/sprite/WaterSprite.cpp" "C:/Users/tungsten/Desktop/sprite/cmake-build-debug/CMakeFiles/sprite.dir/WaterSprite.cpp.obj"
   "C:/Users/tungsten/Desktop/sprite/WindSprite.cpp" "C:/Users/tungsten/Desktop/sprite/cmake-build-debug/CMakeFiles/sprite.dir/WindSprite.cpp.obj"
   "C:/Users/tungsten/Desktop/sprite/main.cpp" "C:/Users/tungsten/Desktop/sprite/cmake-build-debug/CMakeFiles/sprite.dir/main.cpp.obj"
   )

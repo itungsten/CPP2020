@@ -9,7 +9,6 @@ private:
     static ACL_Image self;
     static ACL_Image light;
 
-
 public:
     static void initSelfPic();
     void setSleep(int time);

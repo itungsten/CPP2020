@@ -33,7 +33,7 @@ void ThunderSprite::walk(){
     int oX,oY;arr[0]->getPos(&oX,&oY);
     double dx=oX-posX,dy=oY-posY;
     double dis=(int)sqrt(dx*dx+dy*dy);
-    if(dis <= PIC_SIZE && cd == 0)spell();
+    if(dis <= 1.5*PIC_SIZE && cd == 0)spell();
     Sprite::walk();
 }
 void ThunderSprite::timeChange(){

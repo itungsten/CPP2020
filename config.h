@@ -12,7 +12,7 @@
 #define PIC_SIZE 60
 
 #define FRESH_INTERVAL 30
-#define BIRTH_INTERVAL 5*1000
+#define BIRTH_INTERVAL 2*1000
 
 #define  MASTER_V 10
 
@@ -27,13 +27,15 @@
 #define WIND_PIC "./source/wind.bmp"
 #define FIRE_PIC "./source/fire.bmp"
 #define WEL_PIC "./source/wel.jpg"
+#define OVER_PIC "./source/over.jpg"
 #define THUNDER_PIC "./source/thunder.bmp"
+#define WATER_PIC "./source/water.bmp"
 #define BACKGROUND_PIC "./source/background.jpg"
 #define LIGHT_PIC "./source/light.bmp"
 
 #define IS_REPEAT 1
 
-#define BUF_LEN 15
+#define BUF_LEN 25
 
 #define FONT_SIZE 15
 
@@ -69,6 +71,14 @@
 #define FIRE_DAMAGE 1
 #define FIRE_CD 1
 
+#define WATER_HP -1
+#define WATER_SCORE 5
+#define WATER_WIDTH PIC_SIZE
+#define WATER_HEIGHT PIC_SIZE
+#define WATER_VELOCITY 4
+#define WATER_DAMAGE 1
+#define WATER_TTL 10
+
 #define MAXN 20
 
 #define THUNDER_TIMER_OFFSET MAXN
@@ -80,8 +90,10 @@
 
 #define SCORE_MAX 999
 
+#define MASTER_HP 5
+
 enum{
-    CRAZY=0,WIND,THUNDER,FIRE,KIND
+    CRAZY=0,WIND,THUNDER,FIRE,WATER,KIND
 };
 
 #endif //SPRITE_CONFIG_H

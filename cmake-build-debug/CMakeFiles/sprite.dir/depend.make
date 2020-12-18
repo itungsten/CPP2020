@@ -44,6 +44,14 @@ CMakeFiles/sprite.dir/ThunderSprite.cpp.obj: ../ThunderSprite.cpp
 CMakeFiles/sprite.dir/ThunderSprite.cpp.obj: ../acllib.h
 CMakeFiles/sprite.dir/ThunderSprite.cpp.obj: ../config.h
 
+CMakeFiles/sprite.dir/WaterSprite.cpp.obj: ../include/Object.h
+CMakeFiles/sprite.dir/WaterSprite.cpp.obj: ../include/Sprite.h
+CMakeFiles/sprite.dir/WaterSprite.cpp.obj: ../include/WaterSprite.h
+CMakeFiles/sprite.dir/WaterSprite.cpp.obj: ../include/master.h
+CMakeFiles/sprite.dir/WaterSprite.cpp.obj: ../WaterSprite.cpp
+CMakeFiles/sprite.dir/WaterSprite.cpp.obj: ../acllib.h
+CMakeFiles/sprite.dir/WaterSprite.cpp.obj: ../config.h
+
 CMakeFiles/sprite.dir/WindSprite.cpp.obj: ../include/Object.h
 CMakeFiles/sprite.dir/WindSprite.cpp.obj: ../include/Sprite.h
 CMakeFiles/sprite.dir/WindSprite.cpp.obj: ../include/WindSprite.h
