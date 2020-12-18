@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="sprite"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/tungsten/Desktop/sprite/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sprite">
+				<Option output="C:/Users/tungsten/Desktop/sprite/sprite.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/tungsten/Desktop/sprite/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/tungsten/Desktop/sprite/include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 sprite"/>
+					<CompileFile command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sprite/fast">
+				<Option output="C:/Users/tungsten/Desktop/sprite/sprite.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/tungsten/Desktop/sprite/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/tungsten/Desktop/sprite/include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="d:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 sprite/fast"/>
+					<CompileFile command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/tungsten/Desktop/sprite/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/tungsten/Desktop/sprite/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/mingw/bin/mingw32-make.exe -f &quot;C:/Users/tungsten/Desktop/sprite/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/CrazySprite.cpp">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/FireSprite.cpp">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/Master.cpp">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/Object.cpp">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/Sprite.cpp">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/ThunderSprite.cpp">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/WindSprite.cpp">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/acllib.c">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/acllib.h">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/config.h">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/include/CrazySprite.h">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/include/FireSprite.h">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/include/Object.h">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/include/Sprite.h">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/include/ThunderSprite.h">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/include/WindSprite.h">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/main.cpp">
+			<Option target="sprite"/>
+		</Unit>
+		<Unit filename="C:/Users/tungsten/Desktop/sprite/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

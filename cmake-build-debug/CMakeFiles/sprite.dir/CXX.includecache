@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/FireSprite.h
+Sprite.h
+../include/Sprite.h
+
+../include/Object.h
+acllib.h
+../include/acllib.h
+
+../include/Sprite.h
+acllib.h
+../include/acllib.h
+Object.h
+../include/Object.h
+
+../include/master.h
+acllib.h
+../include/acllib.h
+Object.h
+../include/Object.h
+
+C:/Users/tungsten/Desktop/sprite/FireSprite.cpp
+FireSprite.h
+C:/Users/tungsten/Desktop/sprite/FireSprite.h
+config.h
+C:/Users/tungsten/Desktop/sprite/config.h
+acllib.h
+C:/Users/tungsten/Desktop/sprite/acllib.h
+master.h
+C:/Users/tungsten/Desktop/sprite/master.h
+cmath
+-
+
+C:/Users/tungsten/Desktop/sprite/acllib.h
+Windows.h
+-
+
+C:/Users/tungsten/Desktop/sprite/config.h
+

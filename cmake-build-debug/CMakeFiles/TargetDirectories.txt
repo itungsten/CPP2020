@@ -1,0 +1,3 @@
+C:/Users/tungsten/Desktop/sprite/cmake-build-debug/CMakeFiles/sprite.dir
+C:/Users/tungsten/Desktop/sprite/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/tungsten/Desktop/sprite/cmake-build-debug/CMakeFiles/rebuild_cache.dir
