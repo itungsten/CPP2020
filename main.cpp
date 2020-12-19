@@ -12,7 +12,7 @@
 void startTimer(int timerID, int timeinterval);
 void cancelTimer(int timerID);
 Object* arr[MAXN+1];
-int cnt;int hp=MASTER_HP;bool isRun=0;bool isOver;
+int cnt;int hp=MASTER_HP;bool isRun=0;bool isOver=0;bool isPlay=0;
 
 ACL_Sound backSound;
 ACL_Sound getPoint;
@@ -42,6 +42,7 @@ int Setup()
     loadSound(BACK_MUSIC, &backSound);
     loadSound(POINT_MUSIC,&getPoint);
     playSound(backSound,IS_REPEAT);
+    isPlay=1;
 
     registerTimerEvent(timerCallBack);
     registerKeyboardEvent(keyboardCallBack);
@@ -126,6 +127,16 @@ void keyboardCallBack(int key,int event){
                     cancelTimer(BIRTH_TIMER);
                     cancelTimer(FRESH_TIMER);
                     cancelTimer(SECOND_TIMER);
+                }
+                break;
+            case VK_TAB:
+                if(isPlay){
+                    stopSound(backSound);
+                    isPlay=0;
+                }
+                else{
+                    playSound(backSound,IS_REPEAT);
+                    isPlay=1;
                 }
                 break;
         }
