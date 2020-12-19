@@ -9,8 +9,8 @@ using namespace  std;
 Sprite::Sprite(int Score,int Width,int Height,int Velocity,int Hp)
 : Object(Score,Width,Height,Velocity), type(Hp)
 {
-    tarX=(rand()%LUCK_NUM)+1;
-    tarY=(rand()%LUCK_NUM)+1;
+    tarX=(rand()%LUCK_NUM)+5;
+    tarY=(rand()%LUCK_NUM)+5;
     double tar=sqrt(tarX*tarX+tarY*tarY);
     tarX/=tar,tarY/=tar;
 }

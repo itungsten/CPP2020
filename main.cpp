@@ -178,17 +178,17 @@ void genSprite(){
     if(cnt==MAXN+1)return;
     for(int i=1;;++i){
         if(!arr[i]){
-            int deci=rand()%2333;
-            if(deci<1000){
+            int deci=rand()%THUNDERBOUND;
+            if(deci<CRAZYBOUND){
                 deci=CRAZY;
             }
-            else if(deci<1400){
+            else if(deci<WINDBOUND){
                 deci=WIND;
             }
-            else if(deci<1800){
+            else if(deci<WATERBOUND){
                 deci=WATER;
             }
-            else if(deci<2133){
+            else if(deci<FIREBOUND){
                 deci=FIRE;
             }
             else deci=THUNDER;
@@ -226,13 +226,14 @@ void checkOut(){
             if(!isWater(arr[i])&&!(((Master* )arr[0])->getSleep())){
                 arr[0]->incScore(arr[i]->getScore());
                 if(isThunder(arr[i]))++hp;
+                deleteEle(i);
             }
-            else{
-                arr[0]->decScore(arr[i]->getScore());
-                --hp;
-                if(hp<=0)gameOver();
+            else if(isWater(arr[i])){
+                    arr[0]->decScore(arr[i]->getScore());
+                    --hp;
+                    if(hp<=0)gameOver();
+                    deleteEle(i);
             }
-            deleteEle(i);
         }
     }
 }
