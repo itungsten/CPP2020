@@ -13,7 +13,7 @@ void WindSprite::initSelfPic() {
     loadImage(WIND_PIC,&self);
 }
 WindSprite::WindSprite()
-:Sprite(WIND_SCORE,WIND_WIDTH,WIND_HEIGHT,WIND_VELOCITY,WIND_HP)
+:Sprite(WIND_SCORE,WIND_WIDTH,WIND_HEIGHT,WIND_VELOCITY,WIND)
 {
 
 }

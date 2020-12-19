@@ -12,7 +12,7 @@ protected:
     double tarX,tarY;
 
 public:
-    int hp;
+    int type;
     Sprite(int Score,int Width,int Height,int Velocity,int Hp);
     virtual ~Sprite(){
 

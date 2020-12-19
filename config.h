@@ -43,19 +43,16 @@
 
 #define FONT_NAME "新宋体"
 
-#define CRAZY_HP 1
 #define CRAZY_SCORE 1
 #define CRAZY_WIDTH PIC_SIZE
 #define CRAZY_HEIGHT PIC_SIZE
 #define CRAZY_VELOCITY 6
 
-#define WIND_HP 1
 #define WIND_SCORE 3
 #define WIND_WIDTH PIC_SIZE
 #define WIND_HEIGHT PIC_SIZE
 #define WIND_VELOCITY 4
 
-#define THUNDER_HP 1
 #define THUNDER_SCORE 3
 #define THUNDER_WIDTH PIC_SIZE
 #define THUNDER_HEIGHT PIC_SIZE
@@ -63,7 +60,6 @@
 #define THUNDER_CD 8
 #define THUNDER_SLEEP 3
 
-#define FIRE_HP 1
 #define FIRE_SCORE 5
 #define FIRE_WIDTH PIC_SIZE
 #define FIRE_HEIGHT PIC_SIZE
@@ -71,7 +67,6 @@
 #define FIRE_DAMAGE 1
 #define FIRE_CD 1
 
-#define WATER_HP -1
 #define WATER_SCORE 5
 #define WATER_WIDTH PIC_SIZE
 #define WATER_HEIGHT PIC_SIZE

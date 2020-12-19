@@ -36,6 +36,10 @@ Sprite.h
 Sprite.h
 ../include/Sprite.h
 
+../include/acllib.h
+Windows.h
+-
+
 ../include/master.h
 acllib.h
 ../include/acllib.h
@@ -61,6 +65,30 @@ master.h
 C:/Users/tungsten/Desktop/sprite/master.h
 cmath
 -
+
+C:/Users/tungsten/Desktop/sprite/Master.cpp
+acllib.h
+C:/Users/tungsten/Desktop/sprite/acllib.h
+config.h
+C:/Users/tungsten/Desktop/sprite/config.h
+Master.h
+C:/Users/tungsten/Desktop/sprite/master.h
+cmath
+-
+cstdlib
+-
+iostream
+-
+ctime
+-
+
+C:/Users/tungsten/Desktop/sprite/Object.cpp
+cmath
+-
+Object.h
+C:/Users/tungsten/Desktop/sprite/Object.h
+config.h
+C:/Users/tungsten/Desktop/sprite/config.h
 
 C:/Users/tungsten/Desktop/sprite/Sprite.cpp
 Sprite.h

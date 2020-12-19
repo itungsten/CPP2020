@@ -14,7 +14,7 @@ void WaterSprite::initSelfPic() {
     loadImage(WATER_PIC,&self);
 }
 WaterSprite::WaterSprite()
-        :Sprite(WATER_SCORE,WATER_WIDTH,WATER_HEIGHT,WATER_VELOCITY,WATER_HP),ttl(WATER_TTL)
+        :Sprite(WATER_SCORE,WATER_WIDTH,WATER_HEIGHT,WATER_VELOCITY,WATER),ttl(WATER_TTL)
 {
 
 }

@@ -9,7 +9,7 @@ void CrazySprite::initSelfPic() {
     loadImage(CRAZY_PIC,&self);
 }
 CrazySprite::CrazySprite()
-:Sprite(CRAZY_SCORE,CRAZY_WIDTH,CRAZY_HEIGHT,CRAZY_VELOCITY,CRAZY_HP)
+:Sprite(CRAZY_SCORE,CRAZY_WIDTH,CRAZY_HEIGHT,CRAZY_VELOCITY,CRAZY)
 {
 
 }

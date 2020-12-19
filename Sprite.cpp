@@ -7,7 +7,7 @@
 #include <cmath>
 using namespace  std;
 Sprite::Sprite(int Score,int Width,int Height,int Velocity,int Hp)
-:Object(Score,Width,Height,Velocity),hp(Hp)
+: Object(Score,Width,Height,Velocity), type(Hp)
 {
     tarX=(rand()%LUCK_NUM)+1;
     tarY=(rand()%LUCK_NUM)+1;

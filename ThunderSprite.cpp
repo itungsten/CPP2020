@@ -14,7 +14,7 @@ void ThunderSprite::initSelfPic() {
     loadImage(THUNDER_PIC,&self);
 }
 ThunderSprite::ThunderSprite()
-:Sprite(THUNDER_SCORE,THUNDER_WIDTH,THUNDER_HEIGHT,THUNDER_VELOCITY,THUNDER_HP),cd(0)
+:Sprite(THUNDER_SCORE,THUNDER_WIDTH,THUNDER_HEIGHT,THUNDER_VELOCITY,THUNDER),cd(0)
 {
 
 }

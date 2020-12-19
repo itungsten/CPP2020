@@ -14,7 +14,7 @@ void FireSprite::initSelfPic() {
     loadImage(FIRE_PIC,&self);
 }
 FireSprite::FireSprite()
-        :Sprite(FIRE_SCORE,FIRE_WIDTH,FIRE_HEIGHT,FIRE_VELOCITY,FIRE_HP)
+        :Sprite(FIRE_SCORE,FIRE_WIDTH,FIRE_HEIGHT,FIRE_VELOCITY,FIRE)
 {
 
 }

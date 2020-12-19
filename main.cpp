@@ -28,6 +28,7 @@ void genSprite();
 void deleteEle(int pos);
 void checkOut();
 bool isWater(Object* ptr);
+bool isThunder(Object* ptr);
 void gameOver();
 
 int Setup()
@@ -222,7 +223,10 @@ void checkOut(){
         if(!arr[i])continue;
         if(arr[0]->isConflict(arr[i])){
             playSound(getPoint,0);
-            if(!isWater(arr[i])&&!(((Master* )arr[0])->getSleep()))arr[0]->incScore(arr[i]->getScore());
+            if(!isWater(arr[i])&&!(((Master* )arr[0])->getSleep())){
+                arr[0]->incScore(arr[i]->getScore());
+                if(isThunder(arr[i]))++hp;
+            }
             else{
                 arr[0]->decScore(arr[i]->getScore());
                 --hp;
@@ -233,7 +237,10 @@ void checkOut(){
     }
 }
 bool isWater(Object* ptr){
-    return ((Sprite*)ptr)->hp<0;
+    return ((Sprite*)ptr)->type==WATER;
+}
+bool isThunder(Object* ptr){
+    return ((Sprite*)ptr)->type==THUNDER;
 }
 void gameOver(){
     isOver=1;
