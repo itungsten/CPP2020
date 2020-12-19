@@ -5,8 +5,8 @@
 #ifndef SPRITE_CONFIG_H
 #define SPRITE_CONFIG_H
 
-#define WINDOW_WIDTH 960
-#define WINDOW_HEIGHT 640
+#define WINDOW_WIDTH 1020
+#define WINDOW_HEIGHT 680
 #define WINDOW_TITLE "Pokemon GoGoGo!"
 
 #define PIC_SIZE 60
@@ -29,7 +29,7 @@
 #define WEL_PIC "./source/wel.jpg"
 #define OVER_PIC "./source/over.jpg"
 #define THUNDER_PIC "./source/thunder.bmp"
-#define WATER_PIC "./source/water.bmp"
+#define BOMB_PIC "./source/bomb.bmp"
 #define BACKGROUND_PIC "./source/background.jpg"
 #define LIGHT_PIC "./source/light.bmp"
 
@@ -67,12 +67,12 @@
 #define FIRE_DAMAGE 1
 #define FIRE_CD 2
 
-#define WATER_SCORE 0
-#define WATER_WIDTH PIC_SIZE
-#define WATER_HEIGHT PIC_SIZE
-#define WATER_VELOCITY 4
-#define WATER_DAMAGE 1
-#define WATER_TTL 10
+#define BOMB_SCORE 0
+#define BOMB_WIDTH PIC_SIZE
+#define BOMB_HEIGHT PIC_SIZE
+#define BOMB_VELOCITY 4
+#define BOMB_DAMAGE 1
+#define BOMB_TTL 10
 
 #define MAXN 20
 
@@ -92,10 +92,10 @@
 #define WINDBOUND 1350
 #define THUNDERBOUND 2333
 #define FIREBOUND 2033
-#define WATERBOUND 1500
+#define BOMBBOUND 1500
 
 enum{
-    CRAZY=0,WIND,THUNDER,FIRE,WATER,KIND
+    CRAZY=0,WIND,THUNDER,FIRE,BOMB,KIND
 };
 
 #endif //SPRITE_CONFIG_H

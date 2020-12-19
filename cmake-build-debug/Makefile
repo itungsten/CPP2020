@@ -122,6 +122,33 @@ sprite/fast:
 	$(MAKE) -f CMakeFiles\sprite.dir\build.make CMakeFiles/sprite.dir/build
 .PHONY : sprite/fast
 
+BombSprite.obj: BombSprite.cpp.obj
+
+.PHONY : BombSprite.obj
+
+# target to build an object file
+BombSprite.cpp.obj:
+	$(MAKE) -f CMakeFiles\sprite.dir\build.make CMakeFiles/sprite.dir/BombSprite.cpp.obj
+.PHONY : BombSprite.cpp.obj
+
+BombSprite.i: BombSprite.cpp.i
+
+.PHONY : BombSprite.i
+
+# target to preprocess a source file
+BombSprite.cpp.i:
+	$(MAKE) -f CMakeFiles\sprite.dir\build.make CMakeFiles/sprite.dir/BombSprite.cpp.i
+.PHONY : BombSprite.cpp.i
+
+BombSprite.s: BombSprite.cpp.s
+
+.PHONY : BombSprite.s
+
+# target to generate assembly for a file
+BombSprite.cpp.s:
+	$(MAKE) -f CMakeFiles\sprite.dir\build.make CMakeFiles/sprite.dir/BombSprite.cpp.s
+.PHONY : BombSprite.cpp.s
+
 CrazySprite.obj: CrazySprite.cpp.obj
 
 .PHONY : CrazySprite.obj
@@ -284,33 +311,6 @@ ThunderSprite.cpp.s:
 	$(MAKE) -f CMakeFiles\sprite.dir\build.make CMakeFiles/sprite.dir/ThunderSprite.cpp.s
 .PHONY : ThunderSprite.cpp.s
 
-WaterSprite.obj: WaterSprite.cpp.obj
-
-.PHONY : WaterSprite.obj
-
-# target to build an object file
-WaterSprite.cpp.obj:
-	$(MAKE) -f CMakeFiles\sprite.dir\build.make CMakeFiles/sprite.dir/WaterSprite.cpp.obj
-.PHONY : WaterSprite.cpp.obj
-
-WaterSprite.i: WaterSprite.cpp.i
-
-.PHONY : WaterSprite.i
-
-# target to preprocess a source file
-WaterSprite.cpp.i:
-	$(MAKE) -f CMakeFiles\sprite.dir\build.make CMakeFiles/sprite.dir/WaterSprite.cpp.i
-.PHONY : WaterSprite.cpp.i
-
-WaterSprite.s: WaterSprite.cpp.s
-
-.PHONY : WaterSprite.s
-
-# target to generate assembly for a file
-WaterSprite.cpp.s:
-	$(MAKE) -f CMakeFiles\sprite.dir\build.make CMakeFiles/sprite.dir/WaterSprite.cpp.s
-.PHONY : WaterSprite.cpp.s
-
 WindSprite.obj: WindSprite.cpp.obj
 
 .PHONY : WindSprite.obj
@@ -401,6 +401,9 @@ help:
 	@echo ... sprite
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... BombSprite.obj
+	@echo ... BombSprite.i
+	@echo ... BombSprite.s
 	@echo ... CrazySprite.obj
 	@echo ... CrazySprite.i
 	@echo ... CrazySprite.s
@@ -419,9 +422,6 @@ help:
 	@echo ... ThunderSprite.obj
 	@echo ... ThunderSprite.i
 	@echo ... ThunderSprite.s
-	@echo ... WaterSprite.obj
-	@echo ... WaterSprite.i
-	@echo ... WaterSprite.s
 	@echo ... WindSprite.obj
 	@echo ... WindSprite.i
 	@echo ... WindSprite.s

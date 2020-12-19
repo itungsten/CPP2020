@@ -182,19 +182,19 @@ CMakeFiles/sprite.dir/FireSprite.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sprite.dir/FireSprite.cpp.s"
 	D:\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tungsten\Desktop\sprite\FireSprite.cpp -o CMakeFiles\sprite.dir\FireSprite.cpp.s
 
-CMakeFiles/sprite.dir/WaterSprite.cpp.obj: CMakeFiles/sprite.dir/flags.make
-CMakeFiles/sprite.dir/WaterSprite.cpp.obj: CMakeFiles/sprite.dir/includes_CXX.rsp
-CMakeFiles/sprite.dir/WaterSprite.cpp.obj: ../WaterSprite.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tungsten\Desktop\sprite\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/sprite.dir/WaterSprite.cpp.obj"
-	D:\mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sprite.dir\WaterSprite.cpp.obj -c C:\Users\tungsten\Desktop\sprite\WaterSprite.cpp
+CMakeFiles/sprite.dir/BombSprite.cpp.obj: CMakeFiles/sprite.dir/flags.make
+CMakeFiles/sprite.dir/BombSprite.cpp.obj: CMakeFiles/sprite.dir/includes_CXX.rsp
+CMakeFiles/sprite.dir/BombSprite.cpp.obj: ../BombSprite.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tungsten\Desktop\sprite\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/sprite.dir/BombSprite.cpp.obj"
+	D:\mingw\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\sprite.dir\BombSprite.cpp.obj -c C:\Users\tungsten\Desktop\sprite\BombSprite.cpp
 
-CMakeFiles/sprite.dir/WaterSprite.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sprite.dir/WaterSprite.cpp.i"
-	D:\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tungsten\Desktop\sprite\WaterSprite.cpp > CMakeFiles\sprite.dir\WaterSprite.cpp.i
+CMakeFiles/sprite.dir/BombSprite.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sprite.dir/BombSprite.cpp.i"
+	D:\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tungsten\Desktop\sprite\BombSprite.cpp > CMakeFiles\sprite.dir\BombSprite.cpp.i
 
-CMakeFiles/sprite.dir/WaterSprite.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sprite.dir/WaterSprite.cpp.s"
-	D:\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tungsten\Desktop\sprite\WaterSprite.cpp -o CMakeFiles\sprite.dir\WaterSprite.cpp.s
+CMakeFiles/sprite.dir/BombSprite.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sprite.dir/BombSprite.cpp.s"
+	D:\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tungsten\Desktop\sprite\BombSprite.cpp -o CMakeFiles\sprite.dir\BombSprite.cpp.s
 
 # Object files for target sprite
 sprite_OBJECTS = \
@@ -207,7 +207,7 @@ sprite_OBJECTS = \
 "CMakeFiles/sprite.dir/WindSprite.cpp.obj" \
 "CMakeFiles/sprite.dir/ThunderSprite.cpp.obj" \
 "CMakeFiles/sprite.dir/FireSprite.cpp.obj" \
-"CMakeFiles/sprite.dir/WaterSprite.cpp.obj"
+"CMakeFiles/sprite.dir/BombSprite.cpp.obj"
 
 # External object files for target sprite
 sprite_EXTERNAL_OBJECTS =
@@ -221,7 +221,7 @@ sprite_EXTERNAL_OBJECTS =
 ../sprite.exe: CMakeFiles/sprite.dir/WindSprite.cpp.obj
 ../sprite.exe: CMakeFiles/sprite.dir/ThunderSprite.cpp.obj
 ../sprite.exe: CMakeFiles/sprite.dir/FireSprite.cpp.obj
-../sprite.exe: CMakeFiles/sprite.dir/WaterSprite.cpp.obj
+../sprite.exe: CMakeFiles/sprite.dir/BombSprite.cpp.obj
 ../sprite.exe: CMakeFiles/sprite.dir/build.make
 ../sprite.exe: CMakeFiles/sprite.dir/linklibs.rsp
 ../sprite.exe: CMakeFiles/sprite.dir/objects1.rsp

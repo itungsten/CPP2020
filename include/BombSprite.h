@@ -1,18 +1,18 @@
 //
 // Created by tungsten on 12/18/2020.
 //
-#ifndef SPRITE_WATERSPRITE_H
-#define SPRITE_WATERSPRITE_H
+#ifndef SPRITE_BOMBSPRITE_H
+#define SPRITE_BOMBSPRITE_H
 #include"Sprite.h"
 
-class WaterSprite:public Sprite{
+class BombSprite: public Sprite{
 private:
     int ttl;
 public:
     static ACL_Image self;
     static void initSelfPic();
-    WaterSprite();
-    virtual ~WaterSprite();
+    BombSprite();
+    virtual ~BombSprite();
     virtual void draw() override;
     virtual void timeChange() override;
     virtual void spell() override;
@@ -20,4 +20,4 @@ public:
         return ttl;
     }
 };
-#endif //SPRITE_WATERSPRITE_H
+#endif //SPRITE_BOMBSPRITE_H

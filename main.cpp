@@ -5,7 +5,7 @@
 #include "WindSprite.h"
 #include "ThunderSprite.h"
 #include "FireSprite.h"
-#include "WaterSprite.h"
+#include "BombSprite.h"
 
 #include<ctime>
 
@@ -27,7 +27,7 @@ void printWelcome();
 void genSprite();
 void deleteEle(int pos);
 void checkOut();
-bool isWater(Object* ptr);
+bool isBomb(Object* ptr);
 bool isThunder(Object* ptr);
 void gameOver();
 
@@ -62,8 +62,8 @@ void timerCallBack(int timerID){
             for(int i=1;i<cnt;++i){
                 if(!arr[i])continue;
                 arr[i]->timeChange();
-                if(isWater(arr[i])){
-                    WaterSprite* tmp=(WaterSprite* )arr[i];
+                if(isBomb(arr[i])){
+                    BombSprite* tmp=(BombSprite* )arr[i];
                     if(!tmp->timeToLive())deleteEle(i);
                 }
             }
@@ -140,7 +140,7 @@ void initPic(){
     WindSprite::initSelfPic();
     ThunderSprite::initSelfPic();
     FireSprite::initSelfPic();
-    WaterSprite::initSelfPic();
+    BombSprite::initSelfPic();
 }
 void printWelcome(){
     ACL_Image page;
@@ -153,7 +153,7 @@ void initObjs(){
     arr[cnt++]=(Object*)new WindSprite();
     arr[cnt++]=(Object*)new ThunderSprite();
     arr[cnt++]=(Object*)new FireSprite();
-    arr[cnt++]=(Object*)new WaterSprite();
+    arr[cnt++]=(Object*)new BombSprite();
 }
 void rePaint(){
     beginPaint();
@@ -185,8 +185,8 @@ void genSprite(){
             else if(deci<WINDBOUND){
                 deci=WIND;
             }
-            else if(deci<WATERBOUND){
-                deci=WATER;
+            else if(deci<BOMBBOUND){
+                deci=BOMB;
             }
             else if(deci<FIREBOUND){
                 deci=FIRE;
@@ -204,8 +204,8 @@ void genSprite(){
                     break;
                 case FIRE:
                     arr[i]=new FireSprite();
-                case WATER:
-                    arr[i]=new WaterSprite();
+                case BOMB:
+                    arr[i]=new BombSprite();
             }
             ++cnt;
             return;
@@ -223,12 +223,12 @@ void checkOut(){
         if(!arr[i])continue;
         if(arr[0]->isConflict(arr[i])){
             playSound(getPoint,0);
-            if(!isWater(arr[i])&&!(((Master* )arr[0])->getSleep())){
+            if(!isBomb(arr[i])&&!(((Master* )arr[0])->getSleep())){
                 arr[0]->incScore(arr[i]->getScore());
                 if(isThunder(arr[i]))++hp;
                 deleteEle(i);
             }
-            else if(isWater(arr[i])){
+            else if(isBomb(arr[i])){
                     arr[0]->decScore(arr[i]->getScore());
                     --hp;
                     if(hp<=0)gameOver();
@@ -237,8 +237,8 @@ void checkOut(){
         }
     }
 }
-bool isWater(Object* ptr){
-    return ((Sprite*)ptr)->type==WATER;
+bool isBomb(Object* ptr){
+    return ((Sprite*)ptr)->type==BOMB;
 }
 bool isThunder(Object* ptr){
     return ((Sprite*)ptr)->type==THUNDER;

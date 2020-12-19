@@ -4,6 +4,14 @@
 CMakeFiles/sprite.dir/acllib.c.obj
  C:/Users/tungsten/Desktop/sprite/acllib.c
  C:/Users/tungsten/Desktop/sprite/acllib.h
+CMakeFiles/sprite.dir/BombSprite.cpp.obj
+ ../include/BombSprite.h
+ ../include/Object.h
+ ../include/Sprite.h
+ ../include/master.h
+ C:/Users/tungsten/Desktop/sprite/BombSprite.cpp
+ C:/Users/tungsten/Desktop/sprite/acllib.h
+ C:/Users/tungsten/Desktop/sprite/config.h
 CMakeFiles/sprite.dir/CrazySprite.cpp.obj
  ../include/CrazySprite.h
  ../include/Object.h
@@ -42,14 +50,6 @@ CMakeFiles/sprite.dir/ThunderSprite.cpp.obj
  ../include/ThunderSprite.h
  ../include/master.h
  C:/Users/tungsten/Desktop/sprite/ThunderSprite.cpp
- C:/Users/tungsten/Desktop/sprite/acllib.h
- C:/Users/tungsten/Desktop/sprite/config.h
-CMakeFiles/sprite.dir/WaterSprite.cpp.obj
- ../include/Object.h
- ../include/Sprite.h
- ../include/WaterSprite.h
- ../include/master.h
- C:/Users/tungsten/Desktop/sprite/WaterSprite.cpp
  C:/Users/tungsten/Desktop/sprite/acllib.h
  C:/Users/tungsten/Desktop/sprite/config.h
 CMakeFiles/sprite.dir/WindSprite.cpp.obj
