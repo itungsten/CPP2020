@@ -230,9 +230,9 @@ void checkOut(){
             }
             else if(isBomb(arr[i])){
                 arr[0]->decScore(arr[i]->getScore());
+                delObjs(i);
                 --hp;
                 if(hp<=0)gameOver();
-                delObjs(i);
             }
         }
     }
