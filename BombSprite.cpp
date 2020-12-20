@@ -26,8 +26,6 @@ void BombSprite::draw(){
     putImageTransparent(&self,posX,posY,width,height,RGB(255,255,255));
 }
 void BombSprite::spell() {
-    Master* master=(Master*)arr[0];
-    master->decScore(BOMB_DAMAGE);
 }
 void BombSprite::timeChange(){
     if(ttl)--ttl;
