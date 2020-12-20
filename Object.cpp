@@ -6,7 +6,7 @@
 #include "config.h"
 extern Object* arr[MAXN+1];
 void Object::move(int dX,int dY){
-    moveTo(posX+dX*vMax,posY+dY*vMax);
+    moveTo(posX+ dX * vBase, posY + dY * vBase);
 }
 void Object::moveTo(int X,int Y){
     posX=X;
@@ -34,11 +34,11 @@ void Object::getPos(int *ptrX, int *ptrY) {
 }
 
 Object::Object(int s,int x,int y,int w,int h,int v)
-        :score(s),posX(x),posY(y),width(w),height(h),vMax(v)
+        : score(s), posX(x), posY(y), width(w), height(h), vBase(v)
 {
 }
 Object::Object(int s,int w,int h,int v)
-        :score(s),width(w),height(h),vMax(v)
+        : score(s), width(w), height(h), vBase(v)
 {
     int winWidth=getWidth(),winHeight=getHeight();
     int toX=(winWidth/6)+rand()%(int((winWidth*2/3-width)));

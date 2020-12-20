@@ -33,5 +33,5 @@ void WindSprite::walk(){
         return;
     }
     dx/=dis,dy/=dis;
-    move(-1*vMax*dx*getFactor(),-1*vMax*dy*getFactor());
+    move(-1 * vBase * dx * getFactor(), -1 * vBase * dy * getFactor());
 }

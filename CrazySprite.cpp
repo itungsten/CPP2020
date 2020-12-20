@@ -23,7 +23,7 @@ void CrazySprite::draw(){
 void CrazySprite::walk() {
     int xflag=(rand()&1)?1:-1;
     int yflag=(rand()&1)?1:-1;
-    int xabs=rand()%vMax;
-    int yabs=rand()%vMax;
+    int xabs= rand() % vBase;
+    int yabs= rand() % vBase;
     move(xflag*xabs*getFactor(),yflag*yabs*getFactor());
 }

@@ -10,10 +10,10 @@
 class Sprite:public Object{
 protected:
     double tarX,tarY;
-
-public:
     int type;
-    Sprite(int Score,int Width,int Height,int Velocity,int Hp);
+public:
+    int getType();
+    Sprite(int Score,int Width,int Height,int Velocity,int Type);
     virtual ~Sprite(){
 
     }

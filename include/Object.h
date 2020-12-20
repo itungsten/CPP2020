@@ -12,7 +12,7 @@ protected:
     int score;
     int posX, posY;
     int width, height;
-    int vMax;
+    int vBase;
 public:
     void moveTo(int x,int y);
 

@@ -9,8 +9,7 @@
 
 #include<ctime>
 
-void startTimer(int timerID, int timeinterval);
-void cancelTimer(int timerID);
+
 Object* arr[MAXN+1];
 int cnt;int hp=MASTER_HP;bool isRun=0;bool isOver=0;bool isPlay=0;
 
@@ -18,14 +17,17 @@ ACL_Sound backSound;
 ACL_Sound getPoint;
 ACL_Image background;
 
+void startTimer(int timerID, int timeinterval);
+void cancelTimer(int timerID);
 void timerCallBack(int timerID);
 void keyboardCallBack(int key,int event);
 void initPic();
 void initObjs();
 void rePaint();
 void printWelcome();
-void genSprite();
-void deleteEle(int pos);
+void printOver();
+void genObjs();
+void delObjs(int pos);
 void checkOut();
 bool isBomb(Object* ptr);
 bool isThunder(Object* ptr);
@@ -65,7 +67,7 @@ void timerCallBack(int timerID){
                 arr[i]->timeChange();
                 if(isBomb(arr[i])){
                     BombSprite* tmp=(BombSprite* )arr[i];
-                    if(!tmp->timeToLive())deleteEle(i);
+                    if(!tmp->timeToLive())delObjs(i);
                 }
             }
             break;
@@ -74,7 +76,7 @@ void timerCallBack(int timerID){
             rePaint();
             break;
         case BIRTH_TIMER:
-            genSprite();
+            genObjs();
             break;
         default:
             break;
@@ -158,6 +160,14 @@ void printWelcome(){
     loadImage(WEL_PIC,&page);
     putImageScale(&page,0,0,getWidth(),getHeight());
 }
+void printOver(){
+    beginPaint();
+    ACL_Image page;
+    loadImage(OVER_PIC,&page);
+    putImageScale(&page,0,0,getWidth(),getHeight());
+    endPaint();
+    return;
+}
 void initObjs(){
     arr[cnt++]=new Master(PIC_SIZE, PIC_SIZE, MASTER_V);
     arr[cnt++]=(Object*)new CrazySprite();
@@ -167,15 +177,11 @@ void initObjs(){
     arr[cnt++]=(Object*)new BombSprite();
 }
 void rePaint(){
-    beginPaint();
-//  clearDevice();
     if(isOver){
-        ACL_Image page;
-        loadImage(OVER_PIC,&page);
-        putImageScale(&page,0,0,getWidth(),getHeight());
-        endPaint();
+        printOver();
         return;
     }
+    beginPaint();
     putImageScale(&background,0,0,getWidth(),getHeight());
     for(int i=1;i<MAXN+1;++i){
         if(!arr[i])continue;
@@ -185,45 +191,30 @@ void rePaint(){
     arr[0]->draw();
     endPaint();
 }
-void genSprite(){
+void genObjs(){
     if(cnt==MAXN+1)return;
     for(int i=1;;++i){
         if(!arr[i]){
             int deci=rand()%THUNDERBOUND;
             if(deci<CRAZYBOUND){
-                deci=CRAZY;
+                arr[i]=new CrazySprite();
             }
             else if(deci<WINDBOUND){
-                deci=WIND;
+                arr[i]=new WindSprite();
             }
             else if(deci<BOMBBOUND){
-                deci=BOMB;
+                arr[i]=new BombSprite();
             }
             else if(deci<FIREBOUND){
-                deci=FIRE;
+                arr[i]=new FireSprite();
             }
-            else deci=THUNDER;
-            switch(deci){
-                case CRAZY:
-                    arr[i]=new CrazySprite();
-                    break;
-                case WIND:
-                    arr[i]=new WindSprite();
-                    break;
-                case THUNDER:
-                    arr[i]=new ThunderSprite();
-                    break;
-                case FIRE:
-                    arr[i]=new FireSprite();
-                case BOMB:
-                    arr[i]=new BombSprite();
-            }
+            else arr[i]=new ThunderSprite();
             ++cnt;
             return;
         }
     }
 }
-void deleteEle(int pos){
+void delObjs(int pos){
     delete arr[pos];
     arr[pos]=nullptr;
     --cnt;
@@ -237,22 +228,22 @@ void checkOut(){
             if(!isBomb(arr[i])&&!(((Master* )arr[0])->getSleep())){
                 arr[0]->incScore(arr[i]->getScore());
                 if(isThunder(arr[i]))++hp;
-                deleteEle(i);
+                delObjs(i);
             }
             else if(isBomb(arr[i])){
                     arr[0]->decScore(arr[i]->getScore());
                     --hp;
                     if(hp<=0)gameOver();
-                    deleteEle(i);
+                delObjs(i);
             }
         }
     }
 }
 bool isBomb(Object* ptr){
-    return ((Sprite*)ptr)->type==BOMB;
+    return ((Sprite*)ptr)->getType()==BOMB;
 }
 bool isThunder(Object* ptr){
-    return ((Sprite*)ptr)->type==THUNDER;
+    return ((Sprite*)ptr)->getType()==THUNDER;
 }
 void gameOver(){
     isOver=1;

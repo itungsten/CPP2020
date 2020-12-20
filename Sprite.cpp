@@ -6,8 +6,8 @@
 #include "config.h"
 #include <cmath>
 using namespace  std;
-Sprite::Sprite(int Score,int Width,int Height,int Velocity,int Hp)
-: Object(Score,Width,Height,Velocity), type(Hp)
+Sprite::Sprite(int Score,int Width,int Height,int Velocity,int Type)
+: Object(Score,Width,Height,Velocity), type(Type)
 {
     tarX=(rand()%LUCK_NUM)+5;
     tarY=(rand()%LUCK_NUM)+5;
@@ -18,5 +18,9 @@ void Sprite::walk() {
     //virtual base
     if(posX==0||posX==getWidth()-width)tarX*=-1;
     if(posY==0||posY==getHeight()-height)tarY*=-1;
-    move(vMax*tarX*getFactor(),getFactor()*vMax*tarY);
+    move(vBase * tarX * getFactor(), getFactor() * vBase * tarY);
+}
+
+int Sprite::getType() {
+    return type;
 }
