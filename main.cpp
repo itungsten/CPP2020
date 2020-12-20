@@ -49,13 +49,7 @@ int Setup()
     registerTimerEvent(timerCallBack);
     registerKeyboardEvent(keyboardCallBack);
 
-	beginPaint();
-	setTextBkColor(RGB(152,226,239));
-    setTextSize(FONT_SIZE);
-    setTextFont(FONT_NAME);
     printWelcome();
-	endPaint();
-
 	return 0;
 }
 void timerCallBack(int timerID){
@@ -156,9 +150,14 @@ void initPic(){
     BombSprite::initSelfPic();
 }
 void printWelcome(){
+    beginPaint();
+    setTextBkColor(RGB(152,226,239));
+    setTextSize(FONT_SIZE);
+    setTextFont(FONT_NAME);
     ACL_Image page;
     loadImage(WEL_PIC,&page);
     putImageScale(&page,0,0,getWidth(),getHeight());
+    endPaint();
 }
 void printOver(){
     beginPaint();
@@ -230,9 +229,9 @@ void checkOut(){
                 delObjs(i);
             }
             else if(isBomb(arr[i])){
-                    arr[0]->decScore(arr[i]->getScore());
-                    --hp;
-                    if(hp<=0)gameOver();
+                arr[0]->decScore(arr[i]->getScore());
+                --hp;
+                if(hp<=0)gameOver();
                 delObjs(i);
             }
         }
