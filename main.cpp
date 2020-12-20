@@ -224,8 +224,8 @@ void checkOut(){
     for(int i=1;i<MAXN+1;++i){
         if(!arr[i])continue;
         if(arr[0]->isConflict(arr[i])){
-            playSound(getPoint,0);
             if(!isBomb(arr[i])&&!(((Master* )arr[0])->getSleep())){
+                playSound(getPoint,0);
                 arr[0]->incScore(arr[i]->getScore());
                 if(isThunder(arr[i]))++hp;
                 delObjs(i);
