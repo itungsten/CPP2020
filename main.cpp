@@ -185,7 +185,6 @@ void rePaint(){
     putImageScale(&background,0,0,getWidth(),getHeight());
     for(int i=1;i<MAXN+1;++i){
         if(!arr[i])continue;
-        ((Sprite*) arr[i])->walk();
         arr[i]->draw();
     }
     arr[0]->draw();
@@ -237,6 +236,10 @@ void checkOut(){
                 delObjs(i);
             }
         }
+    }
+    for(int i=1;i<MAXN+1;++i){
+        if(!arr[i])continue;
+        ((Sprite*) arr[i])->walk();
     }
 }
 bool isBomb(Object* ptr){
